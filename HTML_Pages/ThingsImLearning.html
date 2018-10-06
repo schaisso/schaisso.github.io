@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+<h1>Things I'm Learning</h1>
+
+<p>I intend for this page to be a blog of sorts, to keep track of the
+coding topics I go over for that day. If I'm not careful to really learn a
+topic, I find myself going back to it. Hopefully, recounting it in blog
+style will help things to stick a little better, and may help someone along
+their coding journey.
+
+<h2>10/5/18: JavaScript Arrays and Objects</h2>
+
+<p>After graduation, one of the first MeetUps I attended was a MeetUp for
+<a href="http://codefordurham.com/">Code for Durham</a>, a civic hacking group.
+I was super involved in civic engagement at UNC when I was getting my Bachelor's,
+and I hope that in my second career I can be more involved in civic engagement
+than my first career has allowed.
+
+<p>Anyhow, I showed up and decided to volunteer with the Affordable Housing
+group, as it was something I could see myself being interested in addressing.
+Gentrification is becoming a huge concern in Durham, especially with the
+construction of a light rail. One of the organizers asked me about my CS background,
+and eventually we decided that commenting the existing code may be a good task
+to get up to speed with how everything worked. However, in my post-Baccalaureate
+program, we never used JavaScript or Python, which is what the project was
+written in. I got a bit overwhelmed.
+
+<p>A few days later, I found <a href="learn.co">The Flatiron School's Coding
+Bootcamp Prep</a> that has an intro to web development course. I have gotten
+through HTML, CSS, and am working on JS. Tonight, I worked with JS Arrays and
+Objects! One benefit of having gone through my CS post-Baccalaureate program is
+that I have a firm understanding of OOP, but Java and JS are completely different.
+
+<p>Arrays are Objects that are ordered lists of elements separated by commas.
+An array creation looks like:
+<br>
+<br>
+var myArray = [element0, element1, ..., elementN];
+<br>
+<br>
+or like:
+<br>
+<br>
+var myArray = new Array();
+<br>
+<br>
+The first array would look like:
+<br>
+<br>
+var myArray = [
+  'element0'
+  'element1'
+  ...
+  'elementN'
+]
+<br>
+<br>
+<p>Arrays are ordered, and stay in the order they are created in. The array
+[1, 2, 3] is different from the array [2, 1, 3]. Elements can be added to an
+array directly at specific indices, but it's best not to, although accessing
+them that way is okay. Adding elements directly inserts undefined into indices
+not already used (ex: 1, 2, undefined, 4). Array indices are strings that can be
+accessed by array-style notation using brackets, and any numbers used for an array
+index will be coerced into strings. JS won't complain if you try to index an array
+with a variable whose contents don't represent a number, and rather than adding an
+index to the array, you'd add a property to that array, which is just a named
+piece of information that we can only get with reference to the Object. Ex:
+Array.length. In JS, we can assign properties to arrays. Ex: array.myProp = "I'm
+a property"
+<p>Some common array manipulations are:
+<br>
+<br>Mutators(change the underlying array):
+<br>push: adds an element to the end of the array
+<br>pop: removes an element from the end of the array
+<br>unshift: adds an element to the beginning of the array
+<br>shift: removes an element from the beginning of the array
+<br>
+<br>Non-destructive and tools(preserve the underlying array):
+<br>spread operator: three dots in a row, spreads out the arrays contents, copies
+the contents that are in the underlying array, can be used to make a new array to
+manipulate.
+<br>slice: takes a slice from the array. The first argument specifies start point,
+second argument (if any) specifies end point. Passing a negative (-n) argument to
+slice results in the last n elements in an array. Slice can be strategically used
+to avoid mutating the array in ways that push/pop/unshift/shift would do.
+<br>splice: useful in removing elements from the middle of an array. Splice takes
+an index in the array as the first argument, the number of elements to remove as
+the second, and any number of elements to add after the second. With no arguments,
+splice returns an empty array and doesn't affect the target array.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Examples</a>
+<br>
+<br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">For more on arrays</a>
